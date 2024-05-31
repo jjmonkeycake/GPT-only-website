@@ -3,57 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logout</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function confirmLogout() {
-            var confirmation = confirm("Are you sure you want to log out?");
-            if (confirmation) {
-                logout();
-            }
-        }
-
-        function logout() {
-            window.location.href = "index.html"; // Redirect to login screen
-        }
-
-        function cancelLogout() {
-            window.location.href = "home.html"; // Redirect to home screen
-        }
-    </script>
-    <style>
-        .logout-popup {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-        }
-
-        .logout-popup-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .logout-popup button {
-            margin: 0 10px;
-        }
-    </style>
 </head>
 <body>
-    <div class="logout-popup">
-        <div class="logout-popup-content">
-            <p>Are you sure you want to log out?</p>
-            <button onclick="logout()">Yes</button>
-            <button onclick="cancelLogout()">No</button>
+    <header>
+        <div class="logo-container">
+            <div class="circle">
+                <div class="inner-circle">
+                    <span class="initials">JW</span>
+                </div>
+            </div>
+            <div class="logo-text">Login System</div>
         </div>
+    </header>
+    <div class="login-container" id="loginContainer">
+        <h1>Welcome Back</h1>
+        <form id="loginForm" onsubmit="return validateLoginForm()">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <div id="error-message"></div>
+        <p>Don't have an account? <a href="register.html">Create one</a></p>
     </div>
+    <footer>
+        <p>&copy; 2024 Login System. All rights reserved.</p>
+        <p>Contact: info@example.com</p>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
