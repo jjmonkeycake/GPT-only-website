@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="circle">
+                <div class="inner-circle">
+                    <span class="initials">JW</span>
+                </div>
+            </div>
+            <div class="logo-text">Register</div>
+        </div>
+    </header>
+    <div class="login-container" id="registerContainer">
+        <h1>Create an Account</h1>
+        <form id="registerForm" onsubmit="return validateRegisterForm()">
+            <div class="input-group">
+                <label for="newUsername">Username</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+            </div>
+            <div class="input-group">
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <div id="register-error-message"></div>
+        <p>Already have an account? <a href="index.html">Login</a></p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
